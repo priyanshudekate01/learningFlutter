@@ -50,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body:Center(
         child: Container(
-          height: 100,
+          height: 90,
           width: 100,
           color: Colors.red,
           child: Text("Hello Mighty"),
