@@ -48,12 +48,15 @@ class _MyHomePageState extends State<MyHomePage> {
 
         title: Center(child: Text('Flutter Container')),
       ),
-      body:Text('Hello Flutter ', style: TextStyle(
-        fontSize: 25,
-        color: Colors.pinkAccent,
-        fontWeight: FontWeight.w500,
-        backgroundColor: Colors.black
-      ),)
+      body:Center(
+
+        child: Text('Hello Flutter Developer', style: TextStyle(
+          fontSize: 25,
+          color: Colors.pinkAccent,
+          fontWeight: FontWeight.w500,
+          backgroundColor: Colors.black
+        ),),
+      )
 
 
        // This trailing comma makes auto-formatting nicer for build methods.
