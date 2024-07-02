@@ -48,14 +48,31 @@ class _MyHomePageState extends State<MyHomePage> {
 
         title: Center(child: Text('Flutter Container')),
       ),
-      body:Center(
+      /* Types of Button */
+      //   Text Button
+        /* TextButton(
+        child: Text('Clikc Here'),
+        onPressed: (){
+          print('Text Button Clicked');
+        },
+        onLongPress: (){
+          print("Long Pressed!");
+        },
+      )*/
+      //   Elevated Button (Raised Button)
+        /* ElevatedButton(
+        child: Text('Click me'),
 
-        child: Text('Hello Flutter Developer', style: TextStyle(
-          fontSize: 25,
-          color: Colors.pinkAccent,
-          fontWeight: FontWeight.w500,
-          backgroundColor: Colors.black
-        ),),
+        onPressed: (){
+          print('Hello Elevated button');
+        },
+      ) */
+      //   Outlined Button
+      body: OutlinedButton(
+        child: Text("Press Here"),
+        onPressed: (){
+          print("outlined button pressed");
+        },
       )
 
 
