@@ -46,34 +46,19 @@ class _MyHomePageState extends State<MyHomePage> {
 
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
 
-        title: Center(child: Text('Flutter Container')),
+        title: const Center(child: Text('Flutter Container')),
       ),
-      /* Types of Button */
-      //   Text Button
-        /* TextButton(
-        child: Text('Clikc Here'),
-        onPressed: (){
-          print('Text Button Clicked');
-        },
-        onLongPress: (){
-          print("Long Pressed!");
-        },
-      )*/
-      //   Elevated Button (Raised Button)
-        /* ElevatedButton(
-        child: Text('Click me'),
 
-        onPressed: (){
-          print('Hello Elevated button');
-        },
-      ) */
-      //   Outlined Button
-      body: OutlinedButton(
-        child: Text("Press Here"),
-        onPressed: (){
-          print("outlined button pressed");
-        },
+
+      body: Center(
+        child: Container(
+          height: 100,
+          width: 100,
+          child:Image.asset('asset/images/cat.jpeg')
+        ),
       )
+
+      // Image.asset("asset/images/cat.jpeg"),
 
 
        // This trailing comma makes auto-formatting nicer for build methods.
