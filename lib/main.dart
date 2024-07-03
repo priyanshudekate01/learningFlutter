@@ -50,15 +50,46 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
 
 
-      body: Center(
-        child: Container(
-          height: 100,
-          width: 100,
-          child:Image.asset('asset/images/cat.jpeg')
+      body: Container(
+        height: 500,
+            width: 500,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+
+                Text('A',style: TextStyle(fontSize: 30)),
+                    Text('B',style: TextStyle(fontSize: 30)),
+                    Text('C',style: TextStyle(fontSize: 30)),
+                    Text('D',style: TextStyle(fontSize: 30)),
+                    Text('E',style: TextStyle(fontSize: 30)),
+                ElevatedButton(onPressed: (){
+                  print("helleo");
+                }, child: Text('click'))
+
+
+              ],
+
+
+
+            // Row(
+            //   mainAxisAlignment: MainAxisAlignment.center,
+            //   // crossAxisAlignment: ,
+            //   children: [
+            //     Text('A',style: TextStyle(fontSize: 30)),
+            //     Text('B',style: TextStyle(fontSize: 30)),
+            //     Text('C',style: TextStyle(fontSize: 30)),
+            //     Text('D',style: TextStyle(fontSize: 30)),
+            //     Text('E',style: TextStyle(fontSize: 30))
+            //   ],
+            // )
+
+
         ),
       )
 
-      // Image.asset("asset/images/cat.jpeg"),
+
+
 
 
        // This trailing comma makes auto-formatting nicer for build methods.
