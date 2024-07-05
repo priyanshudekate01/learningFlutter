@@ -50,41 +50,28 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
 
 
-      body: Container(
-        height: 500,
-            width: 500,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
+      body: Center(
+        child: InkWell(
+          onTap: (){
+            print('on Tab');
+          },
+          onDoubleTap: (){
+            print('Double Tab');
+          },
+          onLongPress: (){
+            print('LongPressed');
+          },
 
-                Text('A',style: TextStyle(fontSize: 30)),
-                    Text('B',style: TextStyle(fontSize: 30)),
-                    Text('C',style: TextStyle(fontSize: 30)),
-                    Text('D',style: TextStyle(fontSize: 30)),
-                    Text('E',style: TextStyle(fontSize: 30)),
-                ElevatedButton(onPressed: (){
-                  print("helleo");
-                }, child: Text('click'))
-
-
-              ],
-
-
-
-            // Row(
-            //   mainAxisAlignment: MainAxisAlignment.center,
-            //   // crossAxisAlignment: ,
-            //   children: [
-            //     Text('A',style: TextStyle(fontSize: 30)),
-            //     Text('B',style: TextStyle(fontSize: 30)),
-            //     Text('C',style: TextStyle(fontSize: 30)),
-            //     Text('D',style: TextStyle(fontSize: 30)),
-            //     Text('E',style: TextStyle(fontSize: 30))
-            //   ],
-            // )
-
-
+          child: Container(
+            width: 200,
+            height: 200,
+            color: Colors.yellow,
+            child: Center(child: InkWell(
+              onTap: (){
+                print('text Clicked');
+              },
+                child: Text('Click here',style: TextStyle(fontSize: 21, fontWeight: FontWeight.w700),))),
+          ),
         ),
       )
 
