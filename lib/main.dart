@@ -50,30 +50,83 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
 
 
-      body: Center(
-        child: InkWell(
-          onTap: (){
-            print('on Tab');
-          },
-          onDoubleTap: (){
-            print('Double Tab');
-          },
-          onLongPress: (){
-            print('LongPressed');
-          },
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: SingleChildScrollView(
+            child: Column(
+                children:[
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child : SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child:  Row(
+                          children : [
+                            Container(
+                              margin: EdgeInsets.only(right:11),
+                              height:200,
+                              width:200,
 
-          child: Container(
-            width: 200,
-            height: 200,
-            color: Colors.yellow,
-            child: Center(child: InkWell(
-              onTap: (){
-                print('text Clicked');
-              },
-                child: Text('Click here',style: TextStyle(fontSize: 21, fontWeight: FontWeight.w700),))),
-          ),
-        ),
+                              color: Colors.red,
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(right:11),
+                              height:200,
+                              width:200,
+
+                              color: Colors.blue,
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(right:11),
+                              height:200,
+                              width:200,
+
+                              color: Colors.green,
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(right:11),
+                              height:200,
+                              width:200,
+
+                              color: Colors.yellow,
+                            ),
+                          ]
+                      ),
+                    )
+                  ),
+
+
+                  Container(
+                    margin: EdgeInsets.only(bottom:11),
+                    height:200,
+
+                    color: Colors.blue,
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(bottom:11),
+                    height:200,
+
+                    color: Colors.black,
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(bottom:11),
+                    height:200,
+
+                    color: Colors.pink,
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(bottom:11),
+                    height:200,
+
+                    color: Colors.green,
+                  ),
+
+                ]
+            )
+
+        )
       )
+
+
 
 
 
