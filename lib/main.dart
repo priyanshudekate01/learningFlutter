@@ -41,6 +41,8 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
 
+    var names = ['Raman', 'Aman', 'Mighty', 'Xeno'];
+
     return Scaffold(
       appBar: AppBar(
 
@@ -48,86 +50,68 @@ class _MyHomePageState extends State<MyHomePage> {
 
         title: const Center(child: Text('Flutter Container')),
       ),
+        // ListView(
+        //     scrollDirection: Axis.horizontal,
+        //     children:[
+        //       Padding(
+        //         padding: const EdgeInsets.all(8.0),
+        //         child: Text('One', style: TextStyle(fontSize:23, fontWeight: FontWeight.w500)),
+        //       ),
+        //       Padding(
+        //         padding: const EdgeInsets.all(8.0),
+        //         child: Text('Two', style: TextStyle(fontSize:23, fontWeight: FontWeight.w500)),
+        //       ),
+        //       Padding(
+        //         padding: const EdgeInsets.all(8.0),
+        //         child: Text('Three', style: TextStyle(fontSize:23, fontWeight: FontWeight.w500)),
+        //       ),
+        //       Padding(
+        //         padding: const EdgeInsets.all(8.0),
+        //         child: Text('Four', style: TextStyle(fontSize:23, fontWeight: FontWeight.w500)),
+        //       ),
+        //       Padding(
+        //         padding: const EdgeInsets.all(8.0),
+        //         child: Text('Five', style: TextStyle(fontSize:23, fontWeight: FontWeight.w500)),
+        //       ),
+        //       Padding(
+        //         padding: const EdgeInsets.all(8.0),
+        //         child: Text('Six', style: TextStyle(fontSize:23, fontWeight: FontWeight.w500)),
+        //       ),
+        //       Padding(
+        //         padding: const EdgeInsets.all(8.0),
+        //         child: Text('Seven', style: TextStyle(fontSize:23, fontWeight: FontWeight.w500)),
+        //       ),
+        //       Padding(
+        //         padding: const EdgeInsets.all(8.0),
+        //         child: Text('Eight', style: TextStyle(fontSize:23, fontWeight: FontWeight.w500)),
+        //       ),
+        //
+        //     ]
+        // )
 
-
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: SingleChildScrollView(
-            child: Column(
-                children:[
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child : SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
-                      child:  Row(
-                          children : [
-                            Container(
-                              margin: EdgeInsets.only(right:11),
-                              height:200,
-                              width:200,
-
-                              color: Colors.red,
-                            ),
-                            Container(
-                              margin: EdgeInsets.only(right:11),
-                              height:200,
-                              width:200,
-
-                              color: Colors.blue,
-                            ),
-                            Container(
-                              margin: EdgeInsets.only(right:11),
-                              height:200,
-                              width:200,
-
-                              color: Colors.green,
-                            ),
-                            Container(
-                              margin: EdgeInsets.only(right:11),
-                              height:200,
-                              width:200,
-
-                              color: Colors.yellow,
-                            ),
-                          ]
-                      ),
-                    )
-                  ),
-
-
-                  Container(
-                    margin: EdgeInsets.only(bottom:11),
-                    height:200,
-
-                    color: Colors.blue,
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(bottom:11),
-                    height:200,
-
-                    color: Colors.black,
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(bottom:11),
-                    height:200,
-
-                    color: Colors.pink,
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(bottom:11),
-                    height:200,
-
-                    color: Colors.green,
-                  ),
-
-                ]
-            )
-
+      body: ListView.separated(itemBuilder: (context, index) {
+        return Row(
+          children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(names[index],style: TextStyle(fontSize : 21, fontWeight: FontWeight.w500),),
+          ),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text(names[index],style: TextStyle(fontSize : 21, fontWeight: FontWeight.w500),),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text(names[index],style: TextStyle(fontSize : 21, fontWeight: FontWeight.w500),),
         )
+          ],
+        );
+      },
+      itemCount: names.length,
+        separatorBuilder: (context, index){
+        return Divider(height: 100,thickness: 2,);
+        },
       )
-
-
-
 
 
 
