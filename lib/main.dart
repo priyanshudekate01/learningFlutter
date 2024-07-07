@@ -48,37 +48,41 @@ class _MyHomePageState extends State<MyHomePage> {
 
           title: Text('Dashboard'),
         ),
-        body:Container(
-          width: double.infinity,
-          height: double.infinity,
-          color: Colors.blue.shade50,
-          child: Center(
-            child: Container(
-              width: 150,
-              height: 150,
-
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
-                  topLeft:  Radius.circular(20),
-                  bottomRight: Radius.circular(20),
-                ),
-                border: Border.all(
-                  color: Colors.black,
-                  width: 2,
-                ),
-                boxShadow:[
-                  BoxShadow(
-                    blurRadius: 10,
-                    spreadRadius: 7,
-                    color: Colors.grey
-                  )
-                ] ,
-                shape: BoxShape.rectangle,
-                // borderRadius: BorderRadius.circular(20),
-                color: Colors.blueGrey,
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Expanded(
+              flex: 2,
+              child: Container(
+                // width: 50,
+                height: 100,
+                color: Colors.deepPurple,
               ),
             ),
-          ),
+            Expanded(
+              flex: 4,
+              child: Container(
+                // width: 50,
+                height: 100,
+                color: Colors.blue,
+              ),
+            ),
+            Expanded(
+              flex: 3,
+              child: Container(
+                // width: 50,
+                height: 100,
+                color: Colors.purple,
+              ),
+            ),
+            Expanded(
+              child: Container(
+                // width: 50,
+                height: 100,
+                color: Colors.green,
+              ),
+            ),
+          ],
         )
 
 
