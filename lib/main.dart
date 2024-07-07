@@ -48,42 +48,19 @@ class _MyHomePageState extends State<MyHomePage> {
 
           title: Text('Dashboard'),
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Expanded(
-              flex: 2,
-              child: Container(
-                // width: 50,
-                height: 100,
-                color: Colors.deepPurple,
-              ),
-            ),
-            Expanded(
-              flex: 4,
-              child: Container(
-                // width: 50,
-                height: 100,
-                color: Colors.blue,
-              ),
-            ),
-            Expanded(
-              flex: 3,
-              child: Container(
-                // width: 50,
-                height: 100,
-                color: Colors.purple,
-              ),
-            ),
-            Expanded(
-              child: Container(
-                // width: 50,
-                height: 100,
-                color: Colors.green,
-              ),
-            ),
-          ],
-        )
+        // Padding(
+        //   padding: const EdgeInsets.only(top:11, left: 11),
+        //
+        //   child: Text('hello World!', style: TextStyle(fontSize: 25),),
+        // )
+        body: Container(
+          margin: EdgeInsets.all(20),
+            color: Colors.blueGrey,
+            child: Padding(
+              padding: const EdgeInsets.all(20),
+              child: Text('Hello World!',style: TextStyle(fontSize: 30, color: Colors.black),),
+            )),
+
 
 
       // This trailing comma makes auto-formatting nicer for build methods.
