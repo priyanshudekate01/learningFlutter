@@ -41,6 +41,8 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
 
+    var arrNames = ['Alison', 'Benet', 'Colonel', 'Donna', 'Elenor', 'Franklin', 'George', 'Happy',];
+    var numbers = ['1234567890', '4561237890', '7890123456', '1012345678', '1123456789', '1312456789', '1412356789', '1512346789',];
     return Scaffold(
         appBar: AppBar(
 
@@ -48,18 +50,21 @@ class _MyHomePageState extends State<MyHomePage> {
 
           title: Text('Dashboard'),
         ),
-        // Padding(
-        //   padding: const EdgeInsets.only(top:11, left: 11),
-        //
-        //   child: Text('hello World!', style: TextStyle(fontSize: 25),),
-        // )
-        body: Container(
-          margin: EdgeInsets.all(20),
-            color: Colors.blueGrey,
-            child: Padding(
-              padding: const EdgeInsets.all(20),
-              child: Text('Hello World!',style: TextStyle(fontSize: 30, color: Colors.black),),
-            )),
+
+        body: ListView.separated(itemBuilder: (context, index){
+          return ListTile(
+            leading: Text('${index+1}' ,style: TextStyle(fontSize: 20),),
+            title: Text(arrNames[index],style: TextStyle(fontSize: 35),),
+            subtitle: Text(numbers[index],style: TextStyle(fontSize: 25),),
+
+            trailing: Icon(Icons.phone, color: Colors.green,),
+          );
+        },
+        itemCount:  arrNames.length,
+            separatorBuilder: (context,index){
+          return Divider(height: 100,thickness: 1,);
+            },)
+
 
 
 
